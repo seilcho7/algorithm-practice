@@ -43,3 +43,78 @@ function combine(a, b, c) {
 }
 
 combine(inputA, inputB, inputC);
+
+
+// Write a function called sumZero which accepts a sorted array of integers. The function should find the 
+// first pair where the sum is 0. Return an array that includes both values that sum to zero or undefined 
+// if a pair does not exsist.
+// =================================================
+// Solve with a runtime of O(N^2) Quadratic Solution
+// =================================================
+// [-3,-2,-1,0,3,4,4,5] = [-3, 3];
+
+const list = [-3, -2, -1, 0, 3, 4, 4, 5];
+
+function sumZero(list) {
+    for (let i = 0; i < list.length; i++) {
+        // console.log(pair);
+        for (let j = i + 1; j < list.length; j++) {
+            if (list[i] + list[j] == 0) {
+                return [list[i], list[j]];
+            }
+        }
+    }
+}
+sumZero(list);
+
+
+function sumZero(sortedArray) {
+    const array = []
+    sortedArray.forEach(function(num) {
+        if (sortedArray.includes(num * -1)) {
+            array.push([num, num* -1]);
+        };
+    });
+    return array[0];
+}
+
+console.log(sumZero([-7,-3,-2,-1,0,1,2,3,4,5,6]))
+
+
+
+// Create a function which accepts a sorted array and counts the unique values in an array. There can be negative values in the array but the array will always be sorted.
+
+const sortedArray = [-3, -3, -2, -1, -1, 0, 1, 1, 2, 2, 3];
+
+// Quadratic
+function uniqueCount(array) {
+    let uniqueArray = [];
+    let counter = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (!uniqueArray.includes(array[i])) {
+            uniqueArray.push(array[i]);
+            counter += 1;
+        }
+    }
+    return [uniqueArray, counter];
+}
+
+uniqueCount(sortedArray);
+
+// Linear
+function countUnique(array) {
+    let uniqueArray = [];
+    let prev;
+    let counter = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] != prev) {
+            uniqueArray.push(array[i]);
+            counter += 1;
+        }
+        prev = array[i];
+    }
+    return [uniqueArray, counter];
+}
+
+countUnique(sortedArray);
