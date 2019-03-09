@@ -38,7 +38,7 @@ function same(str1, str2) {
             return false;
         }
         // If values of each keys in counter1 and counter2 are different, return false.
-        if (frequencyCounter1[key] != frequencyCounter2[key]) {
+        if (frequencyCounter1[key] !== frequencyCounter2[key]) {
             return false;
         }
     }
