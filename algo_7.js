@@ -93,3 +93,10 @@ function binarySearch(array, numb) {
 }
 
 console.log(binarySearch([1,2,3,4,5,6,7], 7));
+
+function binarySearch(arr, num) {
+    let start = 0;
+    let end = arr.length - 1;
+    
+
+}
