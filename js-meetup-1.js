@@ -1,4 +1,5 @@
 // Roll of Coins
+// https://github.com/adyngom/28-relevant-js-questions/blob/master/4-rolls-of-coins.md
 
 const coinsJar = [5, 10, 10, 25, 25, 25, 10, 5, 1, 1, 1, 25, 25];
 const coinRolls = { "1": 2, "5": 2, "10": 2, "25": 2 };
