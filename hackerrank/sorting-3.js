@@ -61,8 +61,8 @@ Explanation 2
 Harold's magazine is missing the word .
 */
 
-const magazine = ["give", "me", "one", "grand", "today", "night"];
-const note = ["give", "one", "grand", "today"];
+const magazine = ["apgo", "clm", "w", "lxkvg", "mwz", "elo", "bg", "elo", "lxkvg", "elo", "apgo", "apgo", "w", "elo", "bg"];
+const note = ["elo", "lxkvg", "bg", "mwz", "clm", "w"];
 
 function checkMagazine(magazine, note) {
     let magazineFreq = {};
@@ -84,13 +84,18 @@ function checkMagazine(magazine, note) {
             noteFreq[val] = 1;
         }
     }
-
+    // console.log(noteFreq);
     for (let key in noteFreq) {
+        // console.log(key);
         if (!(key in magazineFreq)) {
             hash = false;
             break;
         }
-        if (noteFreq[key] !== magazineFreq[key]) {
+        if (noteFreq[key] > magazineFreq[key]) {
+            hash = false;
+            break;
+        }
+        if (key in magazineFreq && noteFreq[key] > magazineFreq[key]) {
             hash = false;
             break;
         }
