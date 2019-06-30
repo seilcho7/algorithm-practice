@@ -84,9 +84,8 @@ function checkMagazine(magazine, note) {
             noteFreq[val] = 1;
         }
     }
-    // console.log(noteFreq);
+    
     for (let key in noteFreq) {
-        // console.log(key);
         if (!(key in magazineFreq)) {
             hash = false;
             break;
