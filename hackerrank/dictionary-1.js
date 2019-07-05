@@ -22,7 +22,7 @@ The first line contains string .
 The second line contains string .
 Constraints
 
- and  consist of characters in the range ascii[a-z].
+and  consist of characters in the range ascii[a-z].
 Output Format
 
 For each pair of strings, return YES or NO.
