@@ -12,3 +12,14 @@
 // All numbers are valid Int32, no need to validate them.
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest number is first.
+
+const numbers = "1 2 -3 4 5";
+
+function highAndLow(numbers){
+    let arr = numbers.split(" ").sort((a,b) => a-b);
+    console.log(arr);
+    return  arr[arr.length - 1] + " " + arr[0];
+
+}
+
+highAndLow(numbers);
