@@ -19,7 +19,6 @@ function highAndLow(numbers){
     let arr = numbers.split(" ").sort((a,b) => a-b);
     console.log(arr);
     return  arr[arr.length - 1] + " " + arr[0];
-
 }
 
 highAndLow(numbers);
