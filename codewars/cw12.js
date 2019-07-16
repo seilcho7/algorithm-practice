@@ -19,19 +19,19 @@ function DNAStrand(dna){
         console.log(dna[i])
         if (dna[i] === "A") {
             complimentary += "T";
-            console.log(complimentary);
+            // console.log(complimentary);
         } else if (dna[i] === "T") {
             complimentary += "A";
-            console.log(complimentary);
+            // console.log(complimentary);
         } else if (dna[i] === "G") {
             complimentary += "C";
-            console.log(complimentary);
+            // console.log(complimentary);
         } else if (dna[i] === "C") {
             complimentary += "G";
-            console.log(complimentary);
+            // console.log(complimentary);
         }
     }
-    console.log(complimentary);
+    // console.log(complimentary);
     return complimentary;
 }
 
